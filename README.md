@@ -2,8 +2,21 @@
 
 Official distribution repository for browser extensions developed by MasoomDev.
 
+
+## Available extension packages (source downloads)
+
+The following three ZIP files are currently in the repository. These are **repository file downloads**, not published GitHub Release assets. They were reported as working by the developer; manifest/security validation and independent browser testing have not yet been completed.
+
+| Extension | Version | Download ZIP |
+|---|---|---|
+| Masoom Text Expander | 1.0.4 | [Download](https://raw.githubusercontent.com/shayanmila/MasoomDev-Extensions/main/extensions/Masoom-Text-Expander-v1.0.4.zip) |
+| SHEIN Image Downloader | Not confirmed | [Download](https://raw.githubusercontent.com/shayanmila/MasoomDev-Extensions/main/extensions/SHEIN_Image_Downloader.zip) |
+| eBay Fee & Profit Calculator | 1.0.3 | [Download](https://raw.githubusercontent.com/shayanmila/MasoomDev-Extensions/main/extensions/eBay-Fee-Profit-Calculator-v1.0.3.zip) |
+
+When formal versioned releases are published, the website download links should be migrated to verified GitHub Release assets.
+
 ## Downloading
-Visit **[GitHub Releases](https://github.com/shayanmila/MasoomDev-Extensions/releases)** for published, versioned extension ZIP packages. Only use downloads attached to an actual published release.
+Visit **[GitHub Releases](https://github.com/shayanmila/MasoomDev-Extensions/releases)** for published, versioned extension ZIP packages. For stable versioned releases, use assets attached to a published release. Until those releases are available, the explicitly listed repository ZIP files above provide direct downloads.
 
 ## Installing a ZIP extension on Chrome or other compatible Chromium browsers
 1. Download the ZIP file and extract it into a permanent folder.
