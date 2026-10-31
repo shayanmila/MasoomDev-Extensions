@@ -1,5 +1,8 @@
 name: Publish uploaded extension ZIPs
 on:
+  push:
+    paths:
+      - '.github/workflows/release-uploaded-zips.yml'
   workflow_dispatch:
 permissions:
   contents: write
