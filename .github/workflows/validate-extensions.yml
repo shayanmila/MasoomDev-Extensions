@@ -1,0 +1,24 @@
+name: Validate extension manifests
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  manifests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate manifest JSON (manual trigger only)
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          folders = list(Path('extensions').glob('*/manifest.json'))
+          for path in folders:
+              data = json.loads(path.read_text(encoding='utf-8'))
+              for key in ('manifest_version', 'name', 'version'):
+                  assert key in data, f'{path}: missing {key}'
+              assert data['manifest_version'] == 3, f'{path}: expected MV3'
+              print('OK', path)
+          print(f'Validated {len(folders)} extension manifest(s).')
+          PY
