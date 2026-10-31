@@ -1,0 +1,19 @@
+name: Publish uploaded extension ZIPs
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish ZIP assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -e
+          gh release create masoom-text-expander-v1.0.4 extensions/Masoom-Text-Expander-v1.0.4.zip --title "Masoom Text Expander v1.0.4" --notes "Official browser extension ZIP. Extract and load unpacked in Chrome."
+          gh release create shein-image-downloader-v1 extensions/SHEIN_Image_Downloader.zip --title "SHEIN Image Downloader" --notes "Uploaded browser extension ZIP. Extract and load unpacked in Chrome. Version not verified."
+          gh release create ebay-fee-profit-calculator-v1.0.3 extensions/eBay-Fee-Profit-Calculator-v1.0.3.zip --title "eBay Fee Profit Calculator v1.0.3" --notes "Official browser extension ZIP. Extract and load unpacked in Chrome."
